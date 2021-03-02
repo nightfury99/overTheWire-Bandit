@@ -78,12 +78,12 @@ We can use `find` command to find specific file with specific properties.
 ```
 find . -size 1033c -exec ls -sh {} + | xargs file | grep -i ascii
 ```
-- find : command to find
-- .(dot) : current directory
-- 1033c : 1033 byte, c = byte, k = kilo can refer [here](https://ostechnix.com/find-files-bigger-smaller-x-size-linux/)
-- -exec ls -sh {} + : list all file under directory with file size
-- | : let you to have two or more command in one line
-- grep -i : filter only ascii and ignore case sensitive
+- `find` : command to find
+- `.(dot)` : current directory
+- `1033c` : 1033 byte, c = byte, k = kilo can refer [here](https://ostechnix.com/find-files-bigger-smaller-x-size-linux/)
+- `-exec ls -sh {} +` : list all file under directory with file size
+- `|` : let you to have two or more command in one line
+- `grep -i` : filter only ascii and ignore case sensitive
 
 Only one file listed and you can read the file.
 
