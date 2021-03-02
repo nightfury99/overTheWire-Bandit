@@ -29,3 +29,17 @@ We are bandit1 now. If we run `whoami` command, it will tell you about the usern
 
 ![Screenshot 2021-03-01 at 7 02 08 AM](https://user-images.githubusercontent.com/32232422/109516150-b825d880-7a5c-11eb-862b-cf3d80dc9060.png)
 
+## Level 2
+The goal is to find password for bandit2 on bandit1 home directory. If we try to list the file by using `ls` command, we can see a file named '-'. This is dashed filename and the way to read the file is by giving full path of the file. We can use `pwd` to know current path.
+
+![Screenshot 2021-03-01 at 5 55 52 PM](https://user-images.githubusercontent.com/32232422/109585369-44191e00-7ab8-11eb-90cd-feaa4ffd0346.png)
+
+We also can use other syntax such as:
+
+![Screenshot 2021-03-01 at 5 58 20 PM](https://user-images.githubusercontent.com/32232422/109585464-6dd24500-7ab8-11eb-94c5-2ab24bcc53fc.png)
+
+The password for next user is `CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9` and try to ssh to bandit2.
+```
+ssh bandit2@bandit.labs.overthewire.org -p 2220
+```
+
