@@ -103,9 +103,7 @@ The hint is stored somewhere, this means we gonna find it on all directories. We
 find / -type f -group bandit6 -user bandit7 -size 33c -print 2>/dev/null
 ```
 - `find` : command to find
-
 - `/` : root directory, parent dir
-
 - `-type f` : choose regular file type
 - `-group bandit6` : specify the user is bandit6
 - `-user bandit7` : specify the user is bandit7
