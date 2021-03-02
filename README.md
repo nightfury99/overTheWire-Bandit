@@ -125,3 +125,10 @@ cat data.txt | grep -i millionth
 ![Screenshot 2021-03-02 at 2 12 40 AM](https://user-images.githubusercontent.com/32232422/109633636-28843680-7afd-11eb-88d3-62ded8310746.png)
 
 The password is `cvX2JJa4CFALtqS87jk27qwqGhBM9plV`.
+
+## Level 9
+The password for the next level is stored in the file data.txt and is the only line of text that occurs only once. This means we have to remove duplicate data and this can be archieve using `sort` and `uniq -u` to sort unique data.
+
+![Screenshot 2021-03-02 at 2 30 05 AM](https://user-images.githubusercontent.com/32232422/109635443-389d1580-7aff-11eb-9f0c-f132d044122d.png)
+
+The password is `UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR`
