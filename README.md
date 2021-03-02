@@ -67,3 +67,26 @@ As you can see, there is only one ASCII format on -file07. You also can use `gre
 ![Screenshot 2021-03-01 at 6 45 55 PM](https://user-images.githubusercontent.com/32232422/109589180-c99fcc80-7abe-11eb-8e28-de3ab8df1a31.png)
 
 So the password is `koReBOKuIDDepwhWk7jZC0RTdopnAYKh`.
+
+## Level 6
+The next goals to find password on somewhere file on inhere directory and the file have these properties:
+1. human-readable
+2. 1033 bytes in size
+3. not executable
+
+We can use `find` command to find specific file with specific properties. 
+```
+find . -size 1033c -exec ls -sh {} + | xargs file | grep -i ascii
+```
+- find : command to find
+- .(dot) : current directory
+- 1033c : 1033 byte, c = byte, k = kilo can refer [here](https://ostechnix.com/find-files-bigger-smaller-x-size-linux/)
+- -exec ls -sh {} + : list all file under directory with file size
+- | : let you to have two or more command in one line
+- grep -i : filter only ascii and ignore case sensitive
+
+Only one file listed and you can read the file.
+
+![Screenshot 2021-03-01 at 8 16 15 PM](https://user-images.githubusercontent.com/32232422/109597232-b1cf4500-7acc-11eb-98d3-2f75b65c4c93.png)
+
+The password is `DXjZPULLxYr17uwoI01bNLQbtFemEgo7`.
