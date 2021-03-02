@@ -150,3 +150,14 @@ The password for the next level is stored in the file data.txt, which contains b
 ![Screenshot 2021-03-02 at 2 48 49 AM](https://user-images.githubusercontent.com/32232422/109638041-633c9d80-7b02-11eb-8f19-bd7654b71f7a.png)
 
 The password is `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`.
+
+## Level 12
+The password for the next level is stored in the file data.txt, where all lowercase (a-z) and uppercase (A-Z) letters have been rotated by 13 positions. This is classic CTF(Capture The Flag) questions which is called ROT13. We can decode the message using `tr`. `'A-Za-z' 'N-ZA-Mn-za-m'` tell us to replace A to N, B to O and etc. You can read it more [here](https://stackoverflow.com/questions/5442436/using-rot13-and-tr-command-for-having-an-encrypted-email-address).
+
+```
+cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
+```
+
+![Screenshot 2021-03-02 at 2 57 08 AM](https://user-images.githubusercontent.com/32232422/109638805-4e143e80-7b03-11eb-8feb-ae9514f7cd76.png)
+
+The password is `5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`.
