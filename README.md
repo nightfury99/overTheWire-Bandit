@@ -90,3 +90,28 @@ Only one file listed and you can read the file.
 ![Screenshot 2021-03-01 at 8 16 15 PM](https://user-images.githubusercontent.com/32232422/109597232-b1cf4500-7acc-11eb-98d3-2f75b65c4c93.png)
 
 The password is `DXjZPULLxYr17uwoI01bNLQbtFemEgo7`.
+
+## Level 7
+The password for the next level is stored somewhere on the server and has all of the following properties:
+1. owned by user bandit7
+2. owned by group bandit6
+3. 33 bytes in size
+
+The hint is stored somewhere, this means we gonna find it on all directories. We can start to find it on root folder (`/`). If you confuse between `/` and `/root`, you can [read here](https://superuser.com/questions/1072071/linux-folder-and-root-folder). In this challenge, we still use `find` command and some options.
+
+```
+find / -type f -group bandit6 -user bandit7 -size 33c -print 2>/dev/null
+```
+- `find` : command to find
+- `/` : root directory, parent dir
+- `-type f` : choose regular file type
+- `-group bandit6` : specify the user is bandit6
+- `-user bandit7` : specify the user is bandit7
+- `-size 33c` : specify the size of the must 33byte. The flag can refer [here](https://ostechnix.com/find-files-bigger-smaller-x-size-linux/)
+- `-print 2>/dev/null` : removes error or dont display error
+
+Only one file found.
+
+![Screenshot 2021-03-01 at 9 12 52 PM](https://user-images.githubusercontent.com/32232422/109603198-65890280-7ad6-11eb-94b1-a4ca71502140.png)
+
+The password is `HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs`.
