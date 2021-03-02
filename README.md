@@ -50,3 +50,9 @@ On current directory, there is a file named space in the filename. The file name
 
 The password is `UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK`.
 
+## Level 4
+The goal is to find password on hidden file in inhere directory. Use `cd` to change directory and list out the file in currect directory. It will prompt nothing. The challenge already said that the file is a hidden file, so we can use `ls -la` to view hidden file.
+
+![Screenshot 2021-03-01 at 6 21 29 PM](https://user-images.githubusercontent.com/32232422/109587087-50eb4100-7abb-11eb-8b39-229c99675d9f.png)
+
+As you can see, there are .hidden file, any file started with dot `.` will treat as hidden file. Thus, the password is `pIwrPrtPN36QITSp3EQaw936yaFoFgAB`.
