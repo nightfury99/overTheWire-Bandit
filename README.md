@@ -131,4 +131,15 @@ The password for the next level is stored in the file data.txt and is the only l
 
 ![Screenshot 2021-03-02 at 2 30 05 AM](https://user-images.githubusercontent.com/32232422/109635443-389d1580-7aff-11eb-9f0c-f132d044122d.png)
 
-The password is `UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR`
+The password is `UsvVyFSfZZWbi6wgC7dAFyFuR6jQQUhR`.
+
+## Level 10
+The password for the next level is stored in the file data.txt in one of the few human-readable strings, preceded by several ‘=’ characters. If we try to read the file using `cat`, it will throw garbage character. Those characters are binary and cannot be converted into ASCII format.
+
+![Screenshot 2021-03-02 at 2 42 52 AM](https://user-images.githubusercontent.com/32232422/109636929-042a5900-7b01-11eb-8de9-dbadf3abaf84.png)
+
+To read ASCII character, we can use `strings` command to read human-readble text and filter '=' using `grep`.
+
+![Screenshot 2021-03-02 at 2 39 38 AM](https://user-images.githubusercontent.com/32232422/109637119-350a8e00-7b01-11eb-88d0-a08e94e7e956.png)
+
+The password is `truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk`.
