@@ -56,3 +56,14 @@ The goal is to find password on hidden file in inhere directory. Use `cd` to cha
 ![Screenshot 2021-03-01 at 6 21 29 PM](https://user-images.githubusercontent.com/32232422/109587087-50eb4100-7abb-11eb-8b39-229c99675d9f.png)
 
 As you can see, there are .hidden file, any file started with dot `.` will treat as hidden file. Thus, the password is `pIwrPrtPN36QITSp3EQaw936yaFoFgAB`.
+
+## Level 5
+The goal is to find password on a file that is stored in human-readable file in the inhere directory. You have to change directory to inhere folder and list out the files. If we try to read one of the file, it give garbage character. That is binary file which is cannot be represented in ASCII table. We can use `file` command to know what type of the file. The file type is data but we want ASCII file. We can use `*` to check all file.
+
+![Screenshot 2021-03-01 at 6 44 37 PM](https://user-images.githubusercontent.com/32232422/109588957-6dd54380-7abe-11eb-9937-bd0614bdc164.png)
+
+As you can see, there is only one ASCII format on -file07. You also can use `grep -i` to grep only ASCII character. -i means ignore case.
+
+![Screenshot 2021-03-01 at 6 45 55 PM](https://user-images.githubusercontent.com/32232422/109589180-c99fcc80-7abe-11eb-8e28-de3ab8df1a31.png)
+
+So the password is `koReBOKuIDDepwhWk7jZC0RTdopnAYKh`.
