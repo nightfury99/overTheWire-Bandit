@@ -115,9 +115,3 @@ Only one file found.
 ![Screenshot 2021-03-01 at 9 12 52 PM](https://user-images.githubusercontent.com/32232422/109603198-65890280-7ad6-11eb-94b1-a4ca71502140.png)
 
 The password is `HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs`.
-
-
-```
-- asdasd
-- sdasdas
-```
