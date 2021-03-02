@@ -43,3 +43,10 @@ The password for next user is `CV1DtqXWVFXTvM2F0k09SHz0YwRINYA9` and try to ssh 
 ssh bandit2@bandit.labs.overthewire.org -p 2220
 ```
 
+## Level 3
+On current directory, there is a file named space in the filename. The file name is containing spaces, and the way to read the file are by using quotes '' or escape \ for spaces. You also can type `cat`, type the first character of the file and press tab.
+
+![Screenshot 2021-03-01 at 6 14 32 PM](https://user-images.githubusercontent.com/32232422/109586392-fd2c2800-7ab9-11eb-8764-8b92fec1a1b4.png)
+
+The password is `UmHadQclWmgdLOKQ3YNgjWxGoRMb5luK`.
+
