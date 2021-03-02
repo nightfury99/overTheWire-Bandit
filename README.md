@@ -115,3 +115,13 @@ Only one file found.
 ![Screenshot 2021-03-01 at 9 12 52 PM](https://user-images.githubusercontent.com/32232422/109603198-65890280-7ad6-11eb-94b1-a4ca71502140.png)
 
 The password is `HKBPTKQnIay4Fw76bEy8PVxKEDQRKTzs`.
+
+## Level 8
+The password for the next level is stored in the file data.txt next to the word millionth. This is pretty straight forward. We just read the file and grep `millionth`.
+```
+cat data.txt | grep -i millionth
+```
+
+![Screenshot 2021-03-02 at 2 12 40 AM](https://user-images.githubusercontent.com/32232422/109633636-28843680-7afd-11eb-88d3-62ded8310746.png)
+
+The password is `cvX2JJa4CFALtqS87jk27qwqGhBM9plV`.
