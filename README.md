@@ -25,7 +25,7 @@ So the password for bandit1 is `boJ9jbbUNNfktd78OOpsqOltutMc3MY1`. Now we can ss
 
 ![Screenshot 2021-03-01 at 7 01 36 AM](https://user-images.githubusercontent.com/32232422/109515708-3b92fa00-7a5c-11eb-9622-d423ff01087c.png)
 
-We are bandit1 now. If we run [`whoami`](https://en.wikipedia.org/wiki/Whoami) command, it will tell you about the username for current user.
+We are bandit1 now. If we run `whoami` command, it will tell you about the username for current user.
 
 ![Screenshot 2021-03-01 at 7 02 08 AM](https://user-images.githubusercontent.com/32232422/109516150-b825d880-7a5c-11eb-862b-cf3d80dc9060.png)
 
