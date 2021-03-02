@@ -143,3 +143,10 @@ To read ASCII character, we can use `strings` command to read human-readble text
 ![Screenshot 2021-03-02 at 2 39 38 AM](https://user-images.githubusercontent.com/32232422/109637119-350a8e00-7b01-11eb-88d0-a08e94e7e956.png)
 
 The password is `truKLdjsbJ5g7yyJ2X2R0o3a5HQJFuLk`.
+
+## Level 11
+The password for the next level is stored in the file data.txt, which contains base64 encoded data. We have to decode base64 format encoded using `base64 -d`, `-d` stands for decode. You can read more [here](https://en.wikipedia.org/wiki/Base64).
+
+![Screenshot 2021-03-02 at 2 48 49 AM](https://user-images.githubusercontent.com/32232422/109638041-633c9d80-7b02-11eb-8f19-bd7654b71f7a.png)
+
+The password is `IFukwKGsFW8MOq3IRFqrxE1hxTNEbUPR`.
