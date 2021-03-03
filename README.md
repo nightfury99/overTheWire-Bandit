@@ -207,3 +207,16 @@ The password for the next level can be retrieved by submitting the password of t
 ![Screenshot 2021-03-03 at 12 51 14 AM](https://user-images.githubusercontent.com/32232422/109783010-5d0bf700-7bbe-11eb-91a4-348bb6faae34.png)
 
 The password is `BfMYroe26WYalil77FoDi9qh59eK5xNr`.
+
+## Level 16
+The password for the next level can be retrieved by submitting the password of the current level to port 30001 on localhost using SSL encryption. We can use `openssl s_client` to connect to the server that use SSL. Netcat does not support SSL.
+
+```
+echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect 127.0.0.1:30001 -ign_eof
+```
+```
+echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect 127.0.0.1:30001 -quiet
+```
+You can see the password if you scroll untill the bottom. `-ign_eof` is for inhibit shutting down the connection when end of file is reached in the input. We also can use `-quiet` and the function same like `-ign_eof` but it does not print session and certification information.
+
+The password is `cluFn7wTiGryunymYOu4RcffSxQluehd`.
