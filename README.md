@@ -85,6 +85,8 @@ find . -size 1033c -exec ls -sh {} + | xargs file | grep -i ascii
 - `|` : let you to have two or more command in one line
 - `grep -i` : filter only ascii and ignore case sensitive
 
+**UPDATED**: _Add `! -executable` to find non executable file. `find . -size 1033c ! -executable -exec ls -sh {} + | xargs file | grep -i ascii`_
+
 Only one file listed and you can read the file.
 
 ![Screenshot 2021-03-01 at 8 16 15 PM](https://user-images.githubusercontent.com/32232422/109597232-b1cf4500-7acc-11eb-98d3-2f75b65c4c93.png)
