@@ -221,3 +221,39 @@ echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect 127.0.0.1:30
 You can see the password if you scroll untill the bottom. `-ign_eof` is for inhibit shutting down the connection when end of file is reached in the input. We also can use `-quiet` and the function same like `-ign_eof` but it does not print session and certification information.
 
 The password is `cluFn7wTiGryunymYOu4RcffSxQluehd`.
+
+## Level 17
+The credentials for the next level can be retrieved by submitting the password of the current level to a port on localhost in the range 31000 to 32000.
+1. Find out which ports is exists
+2. Then find port who speak on SSL
+3. Only one port will give the password, other will send back whatever you give.
+
+To find open port in range 31000-32000 on server, we can use [`nmap`](https://en.wikipedia.org/wiki/Nmap) to scan port on the network.
+```
+nmap -sV -T4 -v -p 31000-32000 127.0.0.1 
+```
+- `-sV` : scan service
+- `-T4` : Speed time
+- `-v` : verbose mode
+- `-p` : specify port range
+- `127.0.0.1` : localhost ip address
+
+If we scroll down, we'll there are 5 ports open, and two ports have SSL. One is SSl/echo and one is SSl/unknown.
+
+![Screenshot 2021-03-03 at 7 50 20 AM](https://user-images.githubusercontent.com/32232422/109832365-1eddfa00-7bf5-11eb-8f57-930aab269913.png)
+
+We can try both ports, and the right one will not print back the data you sent before.
+```
+echo "cluFn7wTiGryunymYOu4RcffSxQluehd" | openssl s_client -connect 127.0.0.1:31790 -quiet
+```
+
+![Screenshot 2021-03-03 at 7 55 58 AM](https://user-images.githubusercontent.com/32232422/109833530-310c6800-7bf6-11eb-8999-1c3cc30f0c9b.png)
+
+Now just copy the RSA KEY and save into a file name sshkey2.private or anything you like, give read and write permission using [chmod](https://www.cyberciti.biz/faq/unix-linux-bsd-chmod-numeric-permissions-notation-command/), and try to connect to the server with bandit17 user.
+
+```
+chmod 600 sshkey2.private
+ssh -i sshkey2.private bandit17@bandit.labs.overthewire.org -p 2220
+```
+
+And thats it
