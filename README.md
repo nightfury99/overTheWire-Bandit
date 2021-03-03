@@ -184,3 +184,17 @@ File extensions that involves are .gz, .bz2, and .tar only. Tools can use:
 ![Screenshot 2021-03-02 at 11 53 51 PM](https://user-images.githubusercontent.com/32232422/109772258-a0606880-7bb2-11eb-80a4-ba3b9e6dc5cb.png)
 
 The password is `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`.
+
+## Level 14
+The password for the next level is stored in /etc/bandit_pass/bandit14 and can only be read by user bandit14. For this level, you don’t get the next password, but you get a private SSH key that can be used to log into the next level. There is a file named sshkey.private which contain RSA Private key. So we just have to copy the RSA file and save into our machine. Then, ssh to the server using bandit14 as the user.
+
+![Screenshot 2021-03-03 at 12 10 57 AM](https://user-images.githubusercontent.com/32232422/109775421-58434500-7bb6-11eb-905a-fbaaa35d7e65.png)
+
+```
+ssh -i sshkey.private bandit14@bandit.labs.overthewire.org -p 2220
+```
+Now we can read the password at /etc/bandit_pass/bandit14.
+
+![Screenshot 2021-03-03 at 12 22 32 AM](https://user-images.githubusercontent.com/32232422/109775660-a2c4c180-7bb6-11eb-9686-9c2151aa6604.png)
+
+The password is `4wcYUJFw0k0XLShlDzztnTBHiqxU3b3e`.
