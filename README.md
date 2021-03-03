@@ -214,6 +214,7 @@ The password for the next level can be retrieved by submitting the password of t
 ```
 echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect 127.0.0.1:30001 -ign_eof
 ```
+or
 ```
 echo "BfMYroe26WYalil77FoDi9qh59eK5xNr" | openssl s_client -connect 127.0.0.1:30001 -quiet
 ```
