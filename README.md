@@ -161,3 +161,16 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 ![Screenshot 2021-03-02 at 2 57 08 AM](https://user-images.githubusercontent.com/32232422/109638805-4e143e80-7b03-11eb-8feb-ae9514f7cd76.png)
 
 The password is `5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`.
+
+## Level 13
+On this level, the password is stored on data.txt in [hexdump](https://en.wikipedia.org/wiki/Hex_dump) format. Hexdump convert any binary or data into hex format and if you notice the data also contains ASCII text on the right side. The hint for this level is repeatly compressed, thus we have to repeatly decompress the file.
+First we have to covert the hexdump into binary file. At this moment, we dont know the type of the file, it can be zip file, png, jpeg, exe and etc. But first we have to create folder on tmp directory because on our current directory, we dont have permission to create file. Use `mkdir` to create directory and `cp` to copy file from source to destination.
+
+```
+mkdir /tmp/test
+cp data.txt /tmp/test
+```
+
+Now we can 
+
+The password is `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`.
