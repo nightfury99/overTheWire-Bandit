@@ -163,14 +163,24 @@ cat data.txt | tr 'A-Za-z' 'N-ZA-Mn-za-m'
 The password is `5Te8Y4drgCRfCx8ugdwuEX8KFC6k2EUu`.
 
 ## Level 13
-On this level, the password is stored on data.txt in [hexdump](https://en.wikipedia.org/wiki/Hex_dump) format. Hexdump convert any binary or data into hex format and if you notice the data also contains ASCII text on the right side. The hint for this level is repeatly compressed, thus we have to repeatly decompress the file.
-First we have to covert the hexdump into binary file. At this moment, we dont know the type of the file, it can be zip file, png, jpeg, exe and etc. But first we have to create folder on tmp directory because on our current directory, we dont have permission to create file. Use `mkdir` to create directory and `cp` to copy file from source to destination.
+On this level, the password is stored on data.txt in [hexdump](https://en.wikipedia.org/wiki/Hex_dump) format. Hexdump convert any binary or data into hex format and if you notice the data also contains ASCII text on the right side. The hint for this level is repeatly compressed, thus we have to repeatly decompress the file. First we have to covert the hexdump into binary file. At this moment, we dont know the type of the file, it can be zip file, png, jpeg, exe and etc. But first we have to create folder on tmp directory because on our current directory, we dont have permission to create file. Use `mkdir` to create directory and `cp` to copy file from source to destination.
 
 ```
 mkdir /tmp/test
 cp data.txt /tmp/test
 ```
 
-Now we can 
+Now we can convert the hexdump format into binary file using `xxd -r` to revert the hexdump and save it into a file named data. Then, use `file` to check the type of binary file. For this example, it is gzip file, thus we must rename the file extension to .gz. Then try to decompress the data.gz using `gzip -d data.gz`. Since it is repeatly compressed file, we have to repeadly decompress the file as well. The steps just involves:
+1. check the type of binary file by using `file`.
+2. rename the file extension based on first step.
+3. decompress the file.
+4. If the output file from decompressed is not an text file, repeat the process to step 1 again.
+
+File extensions that involves are .gz, .bz2, and .tar only. Tools can use:
+1. `gzip -d` : .gz only, -d stands for decode
+2. `bzip2 -d` : .bzip2 only, -d stands for decode
+3. `tar xvf` : .tar only, x-extract, v-verbose, f-file name type. [details](https://www.tecmint.com/18-tar-command-examples-in-linux/)
+
+![Screenshot 2021-03-02 at 11 53 51 PM](https://user-images.githubusercontent.com/32232422/109772258-a0606880-7bb2-11eb-80a4-ba3b9e6dc5cb.png)
 
 The password is `8ZjyCRiBWFYkneahHwxCv3wb2a1ORpYL`.
