@@ -317,3 +317,15 @@ Then, the suconnect will check if the password is correct or not, icorrect, it w
 ![Screenshot 2021-03-03 at 9 12 32 PM](https://user-images.githubusercontent.com/32232422/109916366-59cd4580-7c68-11eb-907c-9e30ddac0ffa.png)
 
  The password is `gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`.
+
+## Level 22
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed. First, when we see all data on `/etc/cron.d/`, there are multiple files in it, but there is only one file that we interested to which is `cronjob_bandit22` since this challenge is level 22. After read the file, we found out that it will a execute bash file which is `/usr/bin/cronjob_bandit22.sh`.
+
+![Screenshot 2021-03-03 at 10 17 19 PM](https://user-images.githubusercontent.com/32232422/109920605-643f0d80-7c6f-11eb-9d28-54ff33cf96f7.png)
+
+Then, we try to read the file and found out it give [permission](https://www.pluralsight.com/blog/it-ops/linux-file-permissions) to a file named `/tmp/t7O6lds9S0RqQh9aMcz6ShpAoZKF7fgv` and put bandit22 password in it from `/etc/bandit_pass/bandit22`.
+
+![Screenshot 2021-03-03 at 10 17 58 PM](https://user-images.githubusercontent.com/32232422/109920990-ea5b5400-7c6f-11eb-8503-961819ada296.png)
+
+The password is `Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`.
+
