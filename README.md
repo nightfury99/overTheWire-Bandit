@@ -329,3 +329,17 @@ Then, we try to read the file and found out it give [permission](https://www.plu
 
 The password is `Yk7owGAcWjwMVRwrTesJEwB7WVOiILLI`.
 
+## Level 23
+A program is running automatically at regular intervals from cron, the time-based job scheduler. Look in /etc/cron.d/ for the configuration and see what command is being executed. Under `/etc/cron.d/`, we only interested on `/etc/cron.d/cronjob_bandit23`. After read the file, it execute a bash file named `/usr/bin/cronjob_bandit23.sh`.
+
+![Screenshot 2021-03-04 at 12 49 07 AM](https://user-images.githubusercontent.com/32232422/109940887-63b27100-7c87-11eb-9ec8-104080cb0683.png)
+
+Next we need to read `/usr/bin/cronjob_bandit23.sh` file. Based on the code, we know it store `whoami` value on `myname` variable, store md5 hash of myname on `mytarget` variable, print some data, and read password of current user then save on a file based on `mytarget` value. Right now we only want bandit23's password, and we only have execute permission on the file.
+
+![Screenshot 2021-03-04 at 12 49 23 AM](https://user-images.githubusercontent.com/32232422/109941633-35816100-7c88-11eb-922d-c1e0eb0d2028.png)
+
+The solution for this is we going to create our own variable and change whoami to bandit23, because current user right now is bandit22. 
+
+![Screenshot 2021-03-04 at 1 33 31 AM](https://user-images.githubusercontent.com/32232422/109943080-a7a67580-7c89-11eb-8dec-a552ac367517.png)
+
+The password is `jc1udXuA1tiHqjIsL8yaapX5XIAI6i0n`.
