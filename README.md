@@ -267,15 +267,15 @@ diff passwords.old passwords.new
 
 ![Screenshot 2021-03-03 at 5 32 21 PM](https://user-images.githubusercontent.com/32232422/109897861-30042680-7c48-11eb-88ab-5979e7af0e51.png)
 
- The password is `kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`.
+The password is `kfBf3eYk5BPBRzwjqutbbfE887SVc5Yd`.
  
- ## Level 19
- The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH. We have to ssh to server using `bash --noprofile` to start a shell without any user configuration since someone already modified bash configuration. [Read more here](https://superuser.com/questions/1277825/ssh-automatically-logging-out) and [here](https://stackoverflow.com/questions/9357464/how-to-start-a-shell-without-any-user-configuration).
+## Level 19
+The password for the next level is stored in a file readme in the homedirectory. Unfortunately, someone has modified .bashrc to log you out when you log in with SSH. We have to ssh to server using `bash --noprofile` to start a shell without any user configuration since someone already modified bash configuration. [Read more here](https://superuser.com/questions/1277825/ssh-automatically-logging-out) and [here](https://stackoverflow.com/questions/9357464/how-to-start-a-shell-without-any-user-configuration).
  
- ```
- ssh bandit18@bandit.labs.overthewire.org -p 2220 "bash --noprofile --norc"
- ```
+```
+ssh bandit18@bandit.labs.overthewire.org -p 2220 "bash --noprofile --norc"
+```
  
- ![Screenshot 2021-03-03 at 5 50 44 PM](https://user-images.githubusercontent.com/32232422/109899080-2085dd00-7c4a-11eb-9288-747f406e0906.png)
+![Screenshot 2021-03-03 at 5 50 44 PM](https://user-images.githubusercontent.com/32232422/109899080-2085dd00-7c4a-11eb-9288-747f406e0906.png)
 
- The password is `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`.
+The password is `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`.
