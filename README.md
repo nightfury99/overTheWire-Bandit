@@ -298,3 +298,22 @@ But when we check permission on binary file, it has group bandit20, thus, we can
 ![Screenshot 2021-03-03 at 6 14 09 PM](https://user-images.githubusercontent.com/32232422/109902952-00f1b300-7c50-11eb-9232-40554dc6a301.png)
 
 The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`.
+
+## Level 21
+There is a setuid binary in the homedirectory that does the following: it makes a connection to localhost on the port you specify as a commandline argument. It then reads a line of text from the connection and compares it to the password in the previous level (bandit20). If the password is correct, it will transmit the password for the next level (bandit21). This level need you to run two separate terminal or split the terminal to see the differences. Im using iTerm2 to split the window, you can use Tmux or other terminal emulator.
+
+![Screenshot 2021-03-03 at 9 24 35 PM](https://user-images.githubusercontent.com/32232422/109915809-4e2d4f00-7c67-11eb-8e7a-2f5b87fa1c9f.png)
+
+First, on the left side, we gonna set a listener using `nc` on port 1234. You can use any port except other than already used by this server. Then on the right side, we gonna connect to the port 1234 using `./suconnect`.
+
+![Screenshot 2021-03-03 at 9 24 52 PM](https://user-images.githubusercontent.com/32232422/109916194-09ee7e80-7c68-11eb-8ec8-e43e0b68c80f.png)
+
+After that, one the left side, copy bandit20 password and paste on the terminal and press enter.
+
+![Screenshot 2021-03-03 at 9 26 17 PM](https://user-images.githubusercontent.com/32232422/109916264-24c0f300-7c68-11eb-9208-078e508be1d0.png)
+
+Then, the suconnect will check if the password is correct or not, icorrect, it will reply bandit21's password.
+
+![Screenshot 2021-03-03 at 9 12 32 PM](https://user-images.githubusercontent.com/32232422/109916366-59cd4580-7c68-11eb-907c-9e30ddac0ffa.png)
+
+ The password is `gE269g2h3mw3pwgrj0Ha9Uoqen1c9DGr`.
