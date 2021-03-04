@@ -1,5 +1,5 @@
 ## Introduction
-Hello and Assalamualaikum. Today we gonna try to play [Bandit wargames](https://overthewire.org/wargames/bandit/). To start this game, you must connect to the server by using any SSH client such as putty or MobaXTerm. You can use any operating system such windows, linux and mac, but if you are running virtual machine, it may failed to connect to overthewire.org server if it is configured to NAT. You may resolve it by changing NAT to Bridged Adapter.
+Hello and Assalamualaikum. Today we gonna try to play [Bandit wargames](https://overthewire.org/wargames/bandit/). To start this game, you must connect to the server by using any SSH client such as putty or MobaXTerm. You can use any operating system such windows, linux and mac, but if you are running virtual machine, it may failed to connect to overthewire.org server if it is configured to NAT. You may resolve it by changing NAT to Bridged Adapter. Im using hackintosh, but it does not really a big deal 😆.
 
 ## Level 0
 The first is just pretty straight forward. We just need to connect to bandit.labs.overthewire.org server with username: `bandit0` and password `bandit0` on port 2220.
@@ -308,7 +308,7 @@ First, on the left side, we gonna set a listener using `nc` on port 1234. You ca
 
 ![Screenshot 2021-03-03 at 9 24 52 PM](https://user-images.githubusercontent.com/32232422/109916194-09ee7e80-7c68-11eb-8ec8-e43e0b68c80f.png)
 
-After that, one the left side, copy bandit20 password and paste on the terminal and press enter.
+After that, on the left side, copy bandit20's password and paste on the terminal and press enter.
 
 ![Screenshot 2021-03-03 at 9 26 17 PM](https://user-images.githubusercontent.com/32232422/109916264-24c0f300-7c68-11eb-9208-078e508be1d0.png)
 
