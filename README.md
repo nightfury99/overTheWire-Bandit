@@ -338,7 +338,14 @@ Next we need to read `/usr/bin/cronjob_bandit23.sh` file. Based on the code, we 
 
 ![Screenshot 2021-03-04 at 12 49 23 AM](https://user-images.githubusercontent.com/32232422/109941633-35816100-7c88-11eb-922d-c1e0eb0d2028.png)
 
-The solution for this is we going to create our own variable and change whoami to bandit23, because current user right now is bandit22. 
+The solution for this is we going to create our own variable and change whoami to bandit23, because current user right now is bandit22. Now set `mytarget` into some kind of hash and print back the variable. The value of mytarget will be the password file name on `/tmp/` directory.
+
+```
+myname="bandit23"
+mytarget=$(echo I am user $myname | md5sum | cut -d ' ' -f 1)
+echo $mytarget
+cat /tmp/8ca319486bfbbc3663ea0fbe81326349
+```
 
 ![Screenshot 2021-03-04 at 1 33 31 AM](https://user-images.githubusercontent.com/32232422/109943080-a7a67580-7c89-11eb-8dec-a552ac367517.png)
 
