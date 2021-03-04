@@ -279,3 +279,22 @@ ssh bandit18@bandit.labs.overthewire.org -p 2220 "bash --noprofile --norc"
 ![Screenshot 2021-03-03 at 5 50 44 PM](https://user-images.githubusercontent.com/32232422/109899080-2085dd00-7c4a-11eb-9288-747f406e0906.png)
 
 The password is `IueksS7Ubh8G3DCwVzrTd8rAVOwq3M5x`.
+
+## Level 20
+To gain access to the next level, you should use the setuid binary in the homedirectory. Execute it without arguments to find out how to use it. The password for this level can be found in the usual place (/etc/bandit_pass), after you have used the setuid binary. After login, you can see there is a binary file. If we try to run, it says to give any command to run as other user.
+
+![Screenshot 2021-03-03 at 6 23 44 PM](https://user-images.githubusercontent.com/32232422/109901378-d0a91500-7c4d-11eb-9f16-a8faa8dab753.png)
+
+When we try to read the password on `/etc/bandit_pass/bandit20`, it says permission denied. We dont have permission to read the password. Noted that when we  use `ls -la` to check permission on password file, we can see only group `bandit20` can read the password file. Thats why we cannot read the password file since we are bandit19.
+
+![Screenshot 2021-03-03 at 6 13 44 PM](https://user-images.githubusercontent.com/32232422/109902054-b9b6f280-7c4e-11eb-9356-2b2748518b34.png)
+
+But when we check permission on binary file, it has group bandit20, thus, we can read the password by using `bandit20-do`.
+
+```
+./bandit20-do cat /etc/bandit_pass/bandit20
+```
+
+![Screenshot 2021-03-03 at 6 14 09 PM](https://user-images.githubusercontent.com/32232422/109902952-00f1b300-7c50-11eb-9232-40554dc6a301.png)
+
+The password is `GbKksEFF4yrVs6il55v6gwY5aVje5f0j`.
